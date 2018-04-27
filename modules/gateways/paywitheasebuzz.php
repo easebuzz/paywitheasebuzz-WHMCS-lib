@@ -29,15 +29,15 @@ function paywitheasebuzz_link($params) {
     	$amount = $params['amount']; # Format: ##.##
 
 	# Client Variables
-	$firstname = $params['clientdetails']['firstname'];
-	$lastname = $params['clientdetails']['lastname'];
-	$email = $params['clientdetails']['email'];
-	$address1 = $params['clientdetails']['address1'];
-	$city = $params['clientdetails']['city'];
-	$state = $params['clientdetails']['state'];
-	$postcode = $params['clientdetails']['postcode'];
-	$country = $params['clientdetails']['country'];
-	$phone = $params['clientdetails']['phonenumber'];
+	$firstname = trim($params['clientdetails']['firstname']);
+	$lastname = trim($params['clientdetails']['lastname']);
+	$email = trim($params['clientdetails']['email']);
+	$address1 = trim($params['clientdetails']['address1']);
+	$city = trim($params['clientdetails']['city']);
+	$state = trim($params['clientdetails']['state']);
+	$postcode = trim($params['clientdetails']['postcode']);
+	$country = trim($params['clientdetails']['country']);
+	$phone = trim($params['clientdetails']['phonenumber']);
         
     $hashSequence = $key.'|'.$txnid.'|'.$amount.'|'.$productinfo.'|'.$firstname.'|'.$email.'|||||||||||';
     
